@@ -18,4 +18,5 @@ fetch('https://api.thecatapi.com/v1/images/search?limit=10&page=1').then(res => 
     })
     fs.writeFileSync('./index.html', dom.serialize())
 })
+console.log('test')
 
