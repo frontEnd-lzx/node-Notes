@@ -5,8 +5,6 @@ const dom = new JSDOM(`<!DOCTYPE html><div id='app'></div>`)
 
 const document = dom.window.document
 
-const window = dom.window
-
 fetch('https://api.thecatapi.com/v1/images/search?limit=10&page=1').then(res => res.json()).then(data => {
     const app = document.getElementById('app')
     data.forEach(item=>{
@@ -18,5 +16,5 @@ fetch('https://api.thecatapi.com/v1/images/search?limit=10&page=1').then(res => 
     })
     fs.writeFileSync('./index.html', dom.serialize())
 })
-console.log('test')
+
 
